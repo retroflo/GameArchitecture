@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,10 +216,6 @@ PrefabInstance:
     - target: {fileID: 6698565011291297748, guid: ea13f35fde18d534f8efb15a4ba5185a, type: 3}
       propertyPath: m_Name
       value: SplashScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698565011827356884, guid: ea13f35fde18d534f8efb15a4ba5185a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -60.891357
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea13f35fde18d534f8efb15a4ba5185a, type: 3}
