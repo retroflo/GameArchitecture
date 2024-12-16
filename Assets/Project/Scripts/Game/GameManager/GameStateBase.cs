@@ -6,6 +6,8 @@ namespace LWFlo.Game
     public abstract class GameStateBase<TContext> :
         IGameStateWithContext<TContext> where TContext : class
     {
+        public bool isRunning => _isRunning;
+        
         private TContext _context;
         private bool _isRunning;
         

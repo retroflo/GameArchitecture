@@ -4,10 +4,11 @@ using VContainer.Unity;
 
 namespace LWFlo.App
 {
-    public class AppScope : LifetimeScope
+    public class AppScope : LifetimeScope, IStartable
     {
         [SerializeField] private AppScopeConfiguration _config;
-        private void Start()
+
+        public void Start()
         {
             AppStartup();
         }

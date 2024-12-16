@@ -6,6 +6,7 @@ using LWFlo.Constants;
 using LWFlo.Game;
 using LWFlo.Messages;
 using MessagePipe;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -53,15 +54,17 @@ namespace LWFlo.App
         
         private async UniTask RunInitialState(CancellationToken cancellationToken)
         {
+            Debug.Log("Run initial state ..."); // todo: replace debug
             // Analytics and social
         }
         
         private async UniTask RunLoadingState(CancellationToken cancellationToken)
         {
             await UniTask.NextFrame(cancellationToken); // Must wait at least one frame before creating child scope
-
+            
+            Debug.Log("Run loading state ..."); // todo: replace debug
+            
             var gameScope = default(GameScope);
-
             try
             {
                 // Create Scope
@@ -84,6 +87,8 @@ namespace LWFlo.App
         
         private async UniTask RunPlayingState(CancellationToken cancellationToken)
         {
+            Debug.Log("Run playing state ..."); // todo: replace debug
+            
             var gameScope = _scopeRetriever.Invoke(new FetchScopeRequest{ scopeName = ScopeNames.GAME_SCOPE });
             var gameManager = gameScope.scope.Container.Resolve<IGameManager>();
 
