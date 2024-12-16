@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace LWFlo.States
+namespace LWFlo.Game
 {
     public class GameStateGameplayOrResume : GameStateBase<GameStateGameplayOrResume.Context>
     {

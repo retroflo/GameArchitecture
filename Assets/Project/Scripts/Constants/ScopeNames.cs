@@ -1,4 +1,4 @@
-﻿namespace LWFlo.Project.Scripts.Constants
+﻿namespace LWFlo.Constants
 {
     public static class ScopeNames
     {

@@ -2,14 +2,14 @@
 using System.Reflection;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using LWFlo.Project.Scripts.Constants;
-using LWFlo.Project.Scripts.Messages.Requests.Game;
-using LWFlo.States;
+using LWFlo.Constants;
+using LWFlo.Game;
+using LWFlo.Messages;
 using MessagePipe;
 using VContainer;
 using VContainer.Unity;
 
-namespace LWFlo
+namespace LWFlo.App
 {
     public class AppManager
     {

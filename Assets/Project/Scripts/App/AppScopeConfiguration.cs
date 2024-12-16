@@ -1,7 +1,6 @@
-﻿using RetroCloud.BioVirus.App;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace LWFlo
+namespace LWFlo.App
 {
     [CreateAssetMenu(menuName = "LWFlo/Configuration/App Scope Configuration")]
     public class AppScopeConfiguration : ScriptableObject

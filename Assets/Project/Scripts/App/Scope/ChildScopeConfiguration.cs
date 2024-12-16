@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using VContainer.Unity;
 
-namespace RetroCloud.BioVirus.App
+namespace LWFlo.App
 {
     [CreateAssetMenu(menuName = "LWFlo/Configuration/Child Scope Configuration")]
     public class ChildScopeConfiguration : ScriptableObject

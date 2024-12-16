@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace LWFlo
+namespace LWFlo.Game
 {
     public abstract class GameStateBase<TContext> :
         IGameStateWithContext<TContext> where TContext : class

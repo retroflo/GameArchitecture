@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using LWFlo.Project.Scripts.Tools;
+using LWFlo.Tools;
 using VContainer;
 
-namespace LWFlo
+namespace LWFlo.Game
 {
     public class GameManager : IGameManager
     {

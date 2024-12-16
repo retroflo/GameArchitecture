@@ -1,4 +1,4 @@
-﻿namespace LWFlo.Project.Scripts.Messages.Requests.Game
+﻿namespace LWFlo.Messages
 {
     public struct DisposeScopeRequest
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using LWFlo.Project.Scripts.Messages.Requests.Game;
+using LWFlo.Messages;
 using MessagePipe;
 using VContainer.Unity;
 
-namespace RetroCloud.BioVirus.App
+namespace LWFlo.App
 {
     public interface IChildScopeService :         
         IRequestHandler<CreateScopeRequest, CreateScopeResponse>,

@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
-using LWFlo.Project.Scripts.Messages.Requests.Game;
-using LWFlo.Project.Scripts.Tools;
+using LWFlo.Messages;
+using LWFlo.Tools;
 using MessagePipe;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace RetroCloud.BioVirus.App
+namespace LWFlo.App
 {
     [UsedImplicitly]
     public class ChildScopeService : IChildScopeService

@@ -1,8 +1,7 @@
-﻿using LWFlo.States;
-using VContainer;
+﻿using VContainer;
 using VContainer.Unity;
 
-namespace LWFlo
+namespace LWFlo.Game
 {
     public class GameScope : LifetimeScope
     {

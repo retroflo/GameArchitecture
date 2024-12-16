@@ -1,9 +1,8 @@
-﻿using RetroCloud.BioVirus.App;
-using UnityEngine;
+﻿using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace LWFlo
+namespace LWFlo.App
 {
     public class AppScope : LifetimeScope
     {
