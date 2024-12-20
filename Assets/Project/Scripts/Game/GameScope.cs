@@ -7,6 +7,9 @@ namespace LWFlo.Game
     {
         protected override void Configure(IContainerBuilder builder)
         {
+            builder.Register<LocalDataStorage>(Lifetime.Singleton)
+                .As<ILocalDataStorage>();
+            
             builder.Register<GameStateGameplayOrResume>(Lifetime.Transient);
             
             builder.Register<GameManager>(Lifetime.Singleton)
