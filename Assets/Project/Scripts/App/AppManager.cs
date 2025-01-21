@@ -92,8 +92,8 @@ namespace LWFlo.App
             var gameScope = _scopeRetriever.Invoke(new FetchScopeRequest{ scopeName = ScopeNames.GAME_SCOPE });
             var gameManager = gameScope.scope.Container.Resolve<IGameManager>();
 
-            var context = new GameStateGameplayOrResume.Context { };
-            await gameManager.StartWithState<GameStateGameplayOrResume, GameStateGameplayOrResume.Context>(context, cancellationToken);
+            var context = new GameStateGameplayOrMenu.Context { };
+            await gameManager.StartWithState<GameStateGameplayOrMenu, GameStateGameplayOrMenu.Context>(context, cancellationToken);
         }
     }
 }

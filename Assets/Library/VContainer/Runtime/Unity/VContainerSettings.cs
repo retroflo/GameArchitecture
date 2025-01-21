@@ -112,12 +112,6 @@ namespace VContainer.Unity
 
         void OnFirstSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            if (RootLifetimeScope != null &&
-                RootLifetimeScope.autoRun &&
-                (rootLifetimeScopeInstance == null || rootLifetimeScopeInstance.Container == null))
-            {
-                GetOrCreateRootLifetimeScopeInstance();
-            }
             SceneManager.sceneLoaded -= OnFirstSceneLoaded;
         }
     }

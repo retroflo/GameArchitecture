@@ -10,7 +10,7 @@ namespace LWFlo.Game
             builder.Register<LocalDataStorage>(Lifetime.Singleton)
                 .As<ILocalDataStorage>();
             
-            builder.Register<GameStateGameplayOrResume>(Lifetime.Transient);
+            builder.Register<GameStateGameplayOrMenu>(Lifetime.Transient);
             
             builder.Register<GameManager>(Lifetime.Singleton)
                 .As<IGameManager>();

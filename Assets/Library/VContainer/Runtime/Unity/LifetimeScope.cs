@@ -335,12 +335,6 @@ namespace VContainer.Unity
                 }
             }
 
-            // Find root from settings
-            if (VContainerSettings.Instance != null)
-            {
-                return VContainerSettings.Instance.GetOrCreateRootLifetimeScopeInstance();
-            }
-
             return null;
         }
 

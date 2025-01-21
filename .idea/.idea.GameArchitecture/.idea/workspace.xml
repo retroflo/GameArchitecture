@@ -5,32 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e3dca0-8f26-44ac-9e95-121ddec227da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/FileNames.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/FileNames.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/LocalData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/LocalData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/Texts.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Constants/Texts.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataSerializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataSerializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataStructure.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataStructure/GameData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataStructure/GameData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataStructure/PlayerRelatedData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/DataStructure/PlayerRelatedData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/ILocalDataStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/ILocalDataStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/LocalDataStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/DataCore/LocalDataStorage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Data/VContainerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Data/VContainerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/App/AppScope.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/App/AppScope.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Library/VContainer/Runtime/Unity/LifetimeScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Library/VContainer/Runtime/Unity/LifetimeScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Library/VContainer/Runtime/Unity/VContainerSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Library/VContainer/Runtime/Unity/VContainerSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/App/AppManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/App/AppManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrResume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrResume.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/App/AppScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/App/AppScope.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrResume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrResume.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameManager/States/GameStateGameplayOrMenu.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameScope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Game/GameScope.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +30,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2qSCIdv9KZIBVGTrem6BfDwSl2e" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,6 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Standalone Player.Start Unity.executor": "Debug",
+    "XThreadsFramesViewSplitterKey": "0.50183153",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,10 +88,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27556">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28556">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="27556" />
+      <option name="pid" value="28556" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -123,7 +107,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734646514068</updated>
-      <workItem from="1734646516228" duration="10527000" />
+      <workItem from="1734646516228" duration="10570000" />
+      <workItem from="1736455056209" duration="4422000" />
+      <workItem from="1737492033431" duration="5909000" />
     </task>
     <servers />
   </component>
@@ -134,5 +120,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Library/VContainer/Runtime/Unity/VContainerSettings.cs</url>
+          <line>76</line>
+          <properties documentPath="C:\Unity projects\GameArchitecture\Assets\Library\VContainer\Runtime\Unity\VContainerSettings.cs" initialLine="76" containingFunctionPresentation="Method 'GetOrCreateRootLifetimeScopeInstance'">
+            <startOffsets>
+              <option value="2935" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2994" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
