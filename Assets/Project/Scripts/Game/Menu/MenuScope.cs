@@ -2,7 +2,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace Project.Scripts.Menu
+namespace Project.Scripts.Game.Menu
 {
     public class MenuScope : LifetimeScope
     {

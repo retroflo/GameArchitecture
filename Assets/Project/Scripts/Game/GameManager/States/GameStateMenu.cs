@@ -14,14 +14,17 @@ namespace LWFlo.Game
         
         private readonly LifetimeScope _currentScope;
         private readonly IRequestHandler<CreateScopeRequest, CreateScopeResponse> _scopeCreator;
+        private readonly ISceneSystem _sceneSystem;
         
         
         [Inject]
         public GameStateMenu(LifetimeScope currentScope, 
-            IRequestHandler<CreateScopeRequest, CreateScopeResponse> scopeCreator)
+            IRequestHandler<CreateScopeRequest, CreateScopeResponse> scopeCreator, 
+            ISceneSystem sceneSystem)
         {
             _currentScope = currentScope;
             _scopeCreator = scopeCreator;
+            _sceneSystem = sceneSystem;
         }
 
         protected override async UniTask OnRun(CancellationToken cancellationToken)
@@ -34,6 +37,7 @@ namespace LWFlo.Game
             });
 
             var scope = scopeResult.childScope;
+            var scene = _sceneSystem.GetScene();
         }
 
         protected override void OnSuspend()
