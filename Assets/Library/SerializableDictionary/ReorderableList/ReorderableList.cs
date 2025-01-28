@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace SerializableDictionary
+namespace Library.SerializableDictionary
 {
     [System.Serializable]
     public class ReorderableList

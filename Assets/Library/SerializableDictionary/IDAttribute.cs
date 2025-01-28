@@ -1,4 +1,4 @@
-﻿namespace SerializableDictionary
+namespace Library.SerializableDictionary
 {
     [System.AttributeUsage(System.AttributeTargets.Field)]
     public class IDAttribute : System.Attribute

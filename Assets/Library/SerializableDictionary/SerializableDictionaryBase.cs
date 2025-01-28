@@ -1,17 +1,14 @@
-//Based of the following thread https://forum.unity.com/threads/finally-a-serializable-dictionary-for-unity-extracted-from-system-collections-generic.335797/
-
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SerializableDictionary
+namespace Library.SerializableDictionary
 {
     /// <summary>
     /// This class is only used to be able to draw the custom property drawer
     /// </summary>
     public abstract class DrawableDictionary
     {
-        [UnityEngine.HideInInspector]
-        public ReorderableList reorderableList = null;
+        [UnityEngine.HideInInspector] public ReorderableList reorderableList = null;
         public bool isExpanded;
     }
 
@@ -21,7 +18,8 @@ namespace SerializableDictionary
     /// <typeparam name="TKey">Key type</typeparam>
     /// <typeparam name="TValue">Value type</typeparam>
     [System.Serializable]
-    public class SerializableDictionaryBase<TKey, TValue> : DrawableDictionary, IDictionary<TKey, TValue>, UnityEngine.ISerializationCallbackReceiver
+    public class SerializableDictionaryBase<TKey, TValue> : DrawableDictionary, IDictionary<TKey, TValue>,
+        UnityEngine.ISerializationCallbackReceiver
     {
         private Dictionary<TKey, TValue> _dict;
         private readonly static Dictionary<TKey, TValue> _staticEmptyDict = new Dictionary<TKey, TValue>(0);
@@ -147,10 +145,7 @@ namespace SerializableDictionary
 
         public int Count
         {
-            get
-            {
-                return (_dict != null) ? _dict.Count : 0;
-            }
+            get { return (_dict != null) ? _dict.Count : 0; }
         }
 
         bool ICollection<KeyValuePair<TKey, TValue>>.IsReadOnly
@@ -283,13 +278,10 @@ namespace SerializableDictionary
 
         #region ISerializationCallbackReceiver
 
-        [SerializeField]
-        private List<TKey> _keyValues;
+        [SerializeField] private List<TKey> _keyValues;
 
-        [SerializeField]
-        private List<TKey> _keys;
-        [SerializeField]
-        private List<TValue> _values;
+        [SerializeField] private List<TKey> _keys;
+        [SerializeField] private List<TValue> _values;
 
         void ISerializationCallbackReceiver.OnAfterDeserialize()
         {
@@ -364,6 +356,5 @@ namespace SerializableDictionary
         }
 
         #endregion
-
     }
 }
