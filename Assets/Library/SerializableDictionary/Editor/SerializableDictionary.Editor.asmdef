@@ -1,0 +1,18 @@
+{
+    "name": "SerializableDictionary.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6af29f84a7fc2fe438f1fcb481d1ddb4"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
