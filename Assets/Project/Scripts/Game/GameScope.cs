@@ -1,4 +1,6 @@
-﻿using VContainer;
+﻿using MessagePipe;
+using Project.Scripts.Messages.Requests.Events;
+using VContainer;
 using VContainer.Unity;
 
 namespace LWFlo.Game
@@ -11,6 +13,10 @@ namespace LWFlo.Game
                 .As<ILocalDataStorage>();
             
             builder.Register<GameStateGameplayOrMenu>(Lifetime.Transient);
+            builder.Register<GameStateMenu>(Lifetime.Transient);
+            
+            var messageOptions = builder.RegisterMessagePipe();
+            builder.RegisterMessageBroker<GameStateChangedMessage>(messageOptions);
             
             builder.Register<GameManager>(Lifetime.Singleton)
                 .As<IGameManager>();

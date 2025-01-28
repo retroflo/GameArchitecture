@@ -7,9 +7,11 @@ namespace LWFlo.Game
         IGameStateWithContext<TContext> where TContext : class
     {
         public bool isRunning => _isRunning;
-        
+        public bool isSuspended => _isSuspended;
+
         private TContext _context;
         private bool _isRunning;
+        private bool _isSuspended;
         
         public UniTask Run(TContext context, CancellationToken cancellationToken)
         {
@@ -20,5 +22,20 @@ namespace LWFlo.Game
         }
         
         protected abstract UniTask OnRun(CancellationToken cancellationToken);
+        
+        public void Suspend()
+        {
+            _isSuspended = true;
+            OnSuspend();
+        }
+
+        public void Resume()
+        {
+            _isSuspended = false;
+            OnResume();
+        }
+        
+        protected abstract void OnSuspend();
+        protected abstract void OnResume();
     }
 }

@@ -4,14 +4,18 @@ using Cysharp.Threading.Tasks;
 namespace LWFlo.Game
 {
     public interface IGameStateWithContext< in TContext >
-        : IGameStateBase
+        : IGameState
         where TContext : class // Ensure context is nullable
     {
         UniTask Run(TContext context, CancellationToken cancellationToken);
     }
     
-    public interface IGameStateBase
+    public interface IGameState
     {
-        
+        public bool isRunning { get; }
+        public bool isSuspended { get; }
+
+        void Resume();
+        void Suspend();
     }
 }
