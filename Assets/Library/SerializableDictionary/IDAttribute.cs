@@ -1,4 +1,4 @@
-﻿namespace RetroCloud.BioVirus.Templates.SerializableDictionary
+﻿namespace SerializableDictionary
 {
     [System.AttributeUsage(System.AttributeTargets.Field)]
     public class IDAttribute : System.Attribute

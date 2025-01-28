@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace RetroCloud.BioVirus.Templates.SerializableDictionary
+namespace SerializableDictionary
 {
     [System.Serializable]
     public class ReorderableList

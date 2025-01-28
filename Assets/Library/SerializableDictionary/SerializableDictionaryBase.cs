@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RetroCloud.BioVirus.Templates.SerializableDictionary
+namespace SerializableDictionary
 {
     /// <summary>
     /// This class is only used to be able to draw the custom property drawer

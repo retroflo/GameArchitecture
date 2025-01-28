@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace RetroCloud.BioVirus.Templates.SerializableDictionary
+namespace SerializableDictionary
 {
     [CustomPropertyDrawer(typeof(DrawableDictionary), true)]
     public class DictionaryPropertyDrawer : PropertyDrawer

@@ -1,4 +1,4 @@
-﻿namespace RetroCloud.BioVirus.Templates.SerializableDictionary
+﻿namespace SerializableDictionary
 {
     /// <summary>
     /// Attribute used to force drawing a key as a property
