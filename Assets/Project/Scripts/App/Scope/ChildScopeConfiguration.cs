@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using VContainer.Unity;
 
-namespace LWFlo.App
+namespace LWFlo
 {
     [CreateAssetMenu(menuName = "LWFlo/Configuration/Child Scope Configuration")]
     public class ChildScopeConfiguration : ScriptableObject

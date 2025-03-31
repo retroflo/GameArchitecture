@@ -1,6 +1,6 @@
 using System;
 
-namespace LWFlo.Tools
+namespace LWFlo
 {
     public static class StringExtension
     {

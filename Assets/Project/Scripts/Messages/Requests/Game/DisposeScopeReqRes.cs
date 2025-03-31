@@ -1,4 +1,4 @@
-﻿namespace LWFlo.Messages
+﻿namespace LWFlo
 {
     public struct DisposeScopeRequest
     {

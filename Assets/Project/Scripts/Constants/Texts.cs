@@ -1,4 +1,4 @@
-namespace LWFlo.Constants
+namespace LWFlo
 {
     public class Texts
     {

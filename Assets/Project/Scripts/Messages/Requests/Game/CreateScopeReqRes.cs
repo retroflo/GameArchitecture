@@ -1,7 +1,7 @@
 ﻿using System;
 using VContainer.Unity;
 
-namespace LWFlo.Messages
+namespace LWFlo
 {
     public struct CreateScopeRequest
     {

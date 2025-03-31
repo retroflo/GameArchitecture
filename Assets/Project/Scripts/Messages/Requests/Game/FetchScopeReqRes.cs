@@ -1,6 +1,6 @@
 ﻿using VContainer.Unity;
 
-namespace LWFlo.Messages
+namespace LWFlo
 {
     public struct FetchScopeRequest
     {

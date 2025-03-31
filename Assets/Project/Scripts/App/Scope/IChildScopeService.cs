@@ -1,9 +1,8 @@
 ﻿using System;
-using LWFlo.Messages;
 using MessagePipe;
 using VContainer.Unity;
 
-namespace LWFlo.App
+namespace LWFlo
 {
     public interface IChildScopeService :         
         IRequestHandler<CreateScopeRequest, CreateScopeResponse>,

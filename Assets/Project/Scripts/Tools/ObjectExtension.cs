@@ -1,4 +1,4 @@
-﻿namespace LWFlo.Tools
+﻿namespace LWFlo
 {
     public static class ObjectExtension
     {

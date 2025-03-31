@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LWFlo.App
+namespace LWFlo
 {
     [CreateAssetMenu(menuName = "LWFlo/Configuration/App Scope Configuration")]
     public class AppScopeConfiguration : ScriptableObject
