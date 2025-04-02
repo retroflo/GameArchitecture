@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: ChildScopeConfiguration
   m_EditorClassIdentifier: 
   scopes:
-  - {fileID: 7980910917641295615, guid: 66f481f8de5bdb442b2f94a131e99f61, type: 3}
+  - {fileID: 6109207540640649590, guid: 66f481f8de5bdb442b2f94a131e99f61, type: 3}
+  - {fileID: -3757416842784378614, guid: 0595d2865813b604a9c777b9da70d485, type: 3}
+  - {fileID: -3427923114856613682, guid: ea0226cf103631140adfee36e2adf576, type: 3}

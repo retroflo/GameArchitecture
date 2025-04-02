@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -22,11 +22,16 @@ namespace LWFlo
 
         private void AppStartup()
         {
+            var appManager = Container.Resolve<AppManager>();
+            appManager.Initialize();
         }
 
         protected override void Configure(IContainerBuilder builder)
         {
             Application.targetFrameRate = 60;
+            
+            builder.Register<AppManager>(Lifetime.Singleton);
+            builder.Register<GameManager>(Lifetime.Singleton);
             
             builder.Register<ChildScopeService>(Lifetime.Singleton)
                 .WithParameter(_config.childScopeConfiguration)

@@ -3,7 +3,9 @@
     "rootNamespace": "MessagePipe",
     "references": [
         "VContainer",
-        "MessagePipe"
+        "MessagePipe",
+        "UniTask",
+        "UniTask.Linq"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,0 +1,41 @@
+Key Principles:
+- Provide clear, technical responses with precise C# and Unity examples.
+- Use Unity's built-in features and tools whenever possible.
+- Write code consistent with the existing project style.
+- Adhere to SOLID principles.
+- Before using any function, verify that it already exists in the project.
+
+C# and Unity Coding Guidelines:
+- Regions: Do not use regions.
+- Boolean Checks: Always check booleans explicitly. For example, use if (_cool == true) rather than an implicit check.
+- Null Checks: Use the implemented .IsNull and .IsNotNull only for Unity GameObjects and derivatives.
+- Initialization: Never initialize private variables at declaration; initialize them within method calls instead.
+- Component Validation: Do not validate Unity components.
+- Constructor Checks: Do not perform null checks in constructors.
+- Cancellation Tokens: Never dispose cancellation tokens.
+- Magic Numbers and Strings: Extract any string literals or magic numbers into Texts.cs and MagicNumbers.cs.
+- Braces:
+    - Remove optional braces around single-line statements.
+    - In chained statements (e.g., if-else), if any block contains more than one line, include braces for all blocks.
+- Debugging: Use intermediate variables to help with debugging.
+- Method Order: Define methods after the methods that call them.
+- OnDestroy(): Place the OnDestroy() function at the bottom of the class.
+- Namespace Consistency: Use the same namespace as other files in the same directory.
+- Imports:
+    - Remove redundant imports from the top of the file.
+    - If multiple imports have the same namespace, remove the duplicates.
+- Dependency Injection:
+    - Prefer constructor injection over field injection for dependencies.
+    - Minimize mutable instance fields; pass data via parameters.
+- System Injection: Always verify system references before injection.
+- UniTask Usage:
+    - For async UniTask functions, pass cancellationToken via function parameters.
+    - When suppressing UniTask functions, chain .SuppressCancellationThrow() and .Forget(ForgetContext.NAME_OF_THE_FILE_COUNT) (and remember to update ForgetContexts accordingly).
+- Debug logging: in message you need to specify the class name (e.g. Debug.Log($"[{nameof(AppScope)}] Created initial MenuScope");)
+
+Unity-Specific Guidelines:
+- Prefabs: Use prefabs for reusable game objects and UI elements.
+- Asset Management: Leverage Unity’s asset bundle system for efficient resource management and loading.
+
+Language Guidelines:
+- Write all code and comments in English, even if other languages are used in conversation.

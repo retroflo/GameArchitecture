@@ -2,7 +2,8 @@
     "name": "VContainer.Editor",
     "rootNamespace": "",
     "references": [
-        "VContainer"
+        "VContainer",
+        "UniTask"
     ],
     "includePlatforms": [
         "Editor"
