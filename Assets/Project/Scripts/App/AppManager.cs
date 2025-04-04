@@ -1,5 +1,7 @@
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
-using MessagePipe;
 using VContainer;
 
 namespace LWFlo
@@ -8,63 +10,86 @@ namespace LWFlo
     /// AppManager handles the application state transitions and provides
     /// events for state changes.
     /// </summary>
-    public class AppManager
+    public class AppManager : IDisposable
     {
         
         private readonly GameManager _gameManager;
-        private AppState _currentState = AppState.Initializing;
+        private readonly AppSceneManager _appSceneManager;
+        
+        private readonly CancellationTokenSource _appCts;
         
         [Inject]
-        public AppManager(IRequestHandler<CreateScopeRequest, CreateScopeResponse> scopeCreator, GameManager gameManager)
+        public AppManager(GameManager gameManager, AppSceneManager appSceneManager)
         {
             _gameManager = gameManager;
+            _appSceneManager = appSceneManager;
+
+            _appCts = new CancellationTokenSource();
         }
         
-        public void Initialize()
+        public async void Initialize()
         {
-            Debug.Log($"[{nameof(AppManager)}] Initializing");
-            SetState(AppState.Initializing);
+            try
+            {
+                await RunInitialize(_appCts.Token);
+                await RunLoading(_appCts.Token);
+                await RunPlaying(_appCts.Token);
+            }
+            catch (Exception e)
+            {
+                await RunError(_appCts.Token, e);
+                throw;
+            }
             
-            _gameManager.Initialize();
+            await RunQuiting(_appCts.Token);
         }
-        
-        public void SetLoading()
+
+        private async UniTask RunInitialize(CancellationToken cancellationToken)
         {
-            SetState(AppState.Loading);
-        }
-        
-        public void SetPlaying()
-        {
-            SetState(AppState.Playing);
-        }
-        
-        public void SetPaused()
-        {
-            SetState(AppState.Paused);
-        }
-        
-        public void SetError(string errorMessage = null)
-        {
-            if (errorMessage != null)
-                Debug.LogError($"[{nameof(AppManager)}] Error: {errorMessage}");
+            Debug.Log($"[{nameof(AppManager)}] : App initializing");
             
-            SetState(AppState.Error);
+            _appSceneManager.Initialize();
+            await _gameManager.Initialize(cancellationToken);
+            
+            Debug.Log($"[{nameof(AppManager)}] : App was successfully initialized");
         }
         
-        public void SetQuitting()
+        private async UniTask RunLoading(CancellationToken cancellationToken)
         {
-            SetState(AppState.Quitting);
+            Debug.Log($"[{nameof(AppManager)}] : App loading");
+            
+            
+            
+            Debug.Log($"[{nameof(AppManager)}] : App was successfully loaded");
         }
         
-        private void SetState(AppState newState)
+        private async UniTask RunPlaying(CancellationToken cancellationToken)
         {
-            if (_currentState == newState)
-                return;
+            Debug.Log($"[{nameof(AppManager)}] : App playing");
+            await _gameManager.StartWithGameState(cancellationToken);
+        }
+
+        private async UniTask RunError(CancellationToken cancellationToken, Exception exception)
+        {
+            Debug.Log($"[{nameof(AppManager)}] : App error");
+            Debug.LogError($"[{nameof(AppManager)}] : Error initializing: {exception}");
             
-            var previousState = _currentState;
-            _currentState = newState;
-            
-            Debug.Log($"[{nameof(AppManager)}] State changed from {previousState} to {_currentState}");
+#if UNITY_EDITOR
+            if (Application.isEditor)
+                UnityEditor.EditorApplication.ExitPlaymode();
+#endif
+                
+            Application.Quit(-1);
+        }
+        
+        private async UniTask RunQuiting(CancellationToken cancellationToken)
+        {
+            Debug.Log($"[{nameof(AppManager)}] : App quiting");
+        }
+
+        public void Dispose()
+        {
+            _appCts?.Dispose();
         }
     }
 }

@@ -6,5 +6,8 @@ namespace LWFlo
     public class AppScopeConfiguration : ScriptableObject
     {
         public ChildScopeConfiguration childScopeConfiguration;
+        public AppView uiRoot;
+        public MenuScreen uiMenu;
+        public GameplayScreen uiGameplay;
     }
 }

@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: AppScopeConfiguration
   m_EditorClassIdentifier: 
   childScopeConfiguration: {fileID: 11400000, guid: 2cf9c3e61dc8f7f4a8a70d13aa925c71, type: 2}
+  uiRoot: {fileID: 985584594006135122, guid: 88045fbbacedd8d4fae4bc98807f708d, type: 3}
+  uiMenu: {fileID: 1345772340638115061, guid: aff9961d0197fc543af3827bf776a4a5, type: 3}
+  uiGameplay: {fileID: 3347195015935115942, guid: cce98d05e089cb449aaa546fcae3dc22, type: 3}

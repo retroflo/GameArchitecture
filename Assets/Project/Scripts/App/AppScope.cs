@@ -32,6 +32,14 @@ namespace LWFlo
             
             builder.Register<AppManager>(Lifetime.Singleton);
             builder.Register<GameManager>(Lifetime.Singleton);
+            builder.Register<AppSceneManager>(Lifetime.Singleton)
+                .WithParameter(_config.uiRoot);
+            
+            // Register GameStates
+            builder.Register<MenuGameState>(Lifetime.Singleton)
+                .WithParameter(_config.uiMenu);
+            builder.Register<GameplayState>(Lifetime.Singleton)
+                .WithParameter(_config.uiGameplay);
             
             builder.Register<ChildScopeService>(Lifetime.Singleton)
                 .WithParameter(_config.childScopeConfiguration)
